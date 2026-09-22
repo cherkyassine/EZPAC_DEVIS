@@ -77,9 +77,10 @@ body[dir="rtl"]{font-family:'Tahoma','Helvetica Neue',Arial,sans-serif;}
 .opt{
   border:2px solid var(--line); border-radius:12px; padding:12px 10px; text-align:center; cursor:pointer;
   background:var(--cream); font-size:0.86rem; font-weight:600; color:var(--ink);
-  transition:all .15s ease; user-select:none;
+  transition:all .15s ease; user-select:none; overflow:hidden;
 }
-.opt img{width:100%; max-width:70px; height:70px; object-fit:contain; margin:0 auto 6px; display:block;}
+.opt img{width:100%; max-width:70px; height:70px; object-fit:contain; margin:0 auto 6px; display:block; transition:transform .25s ease;}
+.opt:hover img{transform:scale(1.35);}
 .opt.selected{border-color:var(--red); background:color-mix(in srgb, var(--red) 8%, var(--cream)); color:var(--red);}
 
 label.field{display:block; font-size:0.82rem; color:var(--muted); margin-bottom:6px; font-weight:600;}
@@ -165,7 +166,6 @@ footer{text-align:center; padding:20px; color:var(--muted); font-size:0.8rem;}
 
 <div class="lang-bar">
   <button class="lang-btn active" data-lang="fr">Français</button>
-  <button class="lang-btn" data-lang="en">English</button>
   <button class="lang-btn" data-lang="ar">العربية</button>
 </div>
 
@@ -365,39 +365,6 @@ fr: {
   pdfTitle:"Devis EZpac"
 },
 en: {
-  h1:"Online quotes — Custom non-woven bags in Rabat, Morocco",
-  subtitle:"Configure your custom non-woven bags — add several items to your quote before sending it.",
-  seeCart:"View quote ↓",
-  step1:"Bag type", step2:"Size", step3:"Weight (gsm)", step4:"Bag color", step5:"Quantity",
-  step6:"Printing", step7:"Your details",
-  formatLabel:"Dimensions (width × height)",
-  chooseFormat:"Choose a size…", chooseTypeFirst:"Choose a bag type first…",
-  printDetailsLabel:"Logo details (optional)", printDetailsPlaceholder:"E.g.: EZpac logo, red Pantone 200C...",
-  fileLabel:"Logo / artwork file to print",
-  fileWarning:"⚠️ This file is not sent automatically — a reminder will be added to your message so you attach it yourself before sending.",
-  previewTitle:"Current item preview", previewEmpty:"Complete the steps above…",
-  addBtn:"➕ Add this item to the quote", addHint:"You can then configure another bag and add it too.",
-  cartTitle:"Your quote", cartEmpty:"No item added yet.",
-  nameLabel:"Name / Company", namePlaceholder:"Your name or company", phoneLabel:"Phone", emailLabel:"Email",
-  noteLabel:"Note (optional)", notePlaceholder:"Desired deadline, delivery city...",
-  sendWa:"Send via WhatsApp", sendMail:"Send by Email", sendPdf:"Download summary as PDF",
-  sendFiles:"Send with attached files", filesSent:"✓ Quote and files sent successfully!", filesSendError:"Sending error, try again or use WhatsApp/Email.", sending:"Sending...",
-  hintEmpty:"Add at least one item and your details (name + phone) to send your quote request.",
-  hintReady:"No data is stored online: your message opens directly in WhatsApp or your mail app.",
-  qrTitle:"📲 Share this configurator", qrSub:"Scan this QR code to open the page on another device.",
-  copyLink:"Copy link", copied:"Link copied ✓",
-  footer:"EZpac — Printing & customization of non-woven bags — Rabat, Morocco",
-  products:{poignee:"Handle bag", anse:"Loop-handle bag", bretelle:"Strap bag", box:"Premium Box"},
-  gusset:"gusset", small:"Small", medium:"Medium", large:"Large",
-  printLabels:{none:"No printing","1color":"1-color printing"},
-  colorNames:{white:"White",ecru:"Ecru",black:"Black",red:"Red",navy:"Navy blue",skyblue:"Sky blue",green:"Green",yellow:"Yellow",orange:"Orange",gray:"Gray",beige:"Beige",pink:"Pink"},
-  delayLabels:{delay1:"Estimated lead time: 3-5 business days",delay2:"Estimated lead time: 5-7 business days",delay3:"Estimated lead time: 7-10 business days",delay4:"Estimated lead time: 10-12 business days",delay5:"Estimated lead time: 12-15 business days (to confirm)"},
-  msgTitle:"Quote request — EZpac", article:"Item", format:"Size", gram:"Weight", color:"Bag color",
-  qty:"Quantity", print:"Printing", printDet:"Printing details", fileToJoin:"Logo file (to attach)",
-  delay:"Estimated lead time", name:"Name / Company", phone:"Phone", email:"Email", note:"Note",
-  fileReminder:"⚠️ Don't forget to attach the logo file(s) mentioned above before sending!",
-  fillRequired:"Please fill in your name and phone number before sending.",
-  pdfTitle:"EZpac Quote"
 },
 ar: {
   h1:"طلب عرض سعر عبر الإنترنت — أكياس غير منسوجة مخصصة بالرباط، المغرب",
